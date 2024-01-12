@@ -1,17 +1,10 @@
 import './App.css';
 
-// function call(){
-//   return(
-//     <h3>My Name Is a Programmer. Working with reactJs</h3>
-
-//   )
-// }
-
-const mine = () => {
-  return(
+const Person = (props) => {
+  return (
     <>
-    <h1>I am  a Front-End Developer</h1>
-    <h1>Working With react Js</h1>
+        <h1>ReactJS Developer</h1>
+        <h3>The name provided is: {props.name}</h3>
     </>
   )
 }
@@ -19,9 +12,15 @@ const mine = () => {
 function App() {
   return (
     <div className="App">
-      <mine />
+      <Person name = {"People"}/>
+    
     </div>
   );
 }
 
+
+
 export default App;
+
+
+
