@@ -1,19 +1,22 @@
+import { useState } from 'react';
+
 import './App.css';
 
-const Person = (props) => {
-  return (
-    <>
-        <h1>ReactJS Developer</h1>
-        <h3>The name provided is: {props.name}</h3>
-    </>
-  )
-}
 
 function App() {
+  const [counter, setCounter] = useState();
   return (
     <div className="App">
-      <Person name = {"People"}/>
+    <button onClick={ 
+      () =>{
+        setCounter( (prevCount) => prevCount -1 )
+      }
+    }>-</button>
+    <h1>{counter}</h1>
+    <button
     
+    
+    >+</button>
     </div>
   );
 }
